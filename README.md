@@ -1,5 +1,7 @@
 # ConnectSphere: An Interest-Based Social Platform
 ConnectSphere is a modern, fullstack social media application designed to connect users based on their shared interests. It features a real-time feed, user discovery, private chat, and is enhanced with AI-powered features using the Google Gemini API to make interactions more engaging.
+<br>
+Check out here : https://connect-sphere-8t9x.onrender.com
 
 <img src = "cs1.png">
 
