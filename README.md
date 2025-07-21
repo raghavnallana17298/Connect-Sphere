@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# ConnectSphere: An Interest-Based Social Platform
+ConnectSphere is a modern, fullstack social media application designed to connect users based on their shared interests. It features a real-time feed, user discovery, private chat, and is enhanced with AI-powered features using the Google Gemini API to make interactions more engaging.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- It's recommended to add a screenshot or logo here -->
 
-## Available Scripts
+# ✨ Features
+User Authentication: Secure sign-up and login functionality using Firebase Authentication.
 
-In the project directory, you can run:
+# User Profiles: Users can set their name, age, and a list of personal interests.
 
-### `npm start`
+# Public Feed: A real-time public feed where any user can post their thoughts and see posts from others.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Interest-Based Discovery: A "Discover" page that intelligently suggests other users with at least one shared interest.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Real-Time Private Chat: Secure, one-on-one chat functionality between users, built with Firestore.
 
-### `npm test`
+# 🤖 AI Post Summarizer: Utilizes the Gemini API to provide a quick, one-sentence summary of any post on the feed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 🤖 AI Icebreakers: Generates three unique and relevant conversation starters in the chat window based on the shared interests of the two users.
 
-### `npm run build`
+Responsive Design: A clean, modern, and fully responsive UI built with Tailwind CSS.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 🛠️ Tech Stack
+Frontend: React (Create React App)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Backend: Node.js with Express (as a secure proxy for API keys)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Database: Google Firestore (for user data, posts, and chats)
 
-### `npm run eject`
+Authentication: Firebase Authentication
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Styling: Tailwind CSS
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+AI: Google Gemini API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# 📂 Project Structure
+The project is organized as a monorepo with two main directories:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+/client: Contains the frontend React application.
 
-## Learn More
+/server: Contains the backend Node.js Express proxy server.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+/connectsphere-fullstack
+├── client/          <-- React App
+├── server/          <-- Node.js Proxy
+└── package.json     <-- Root package to run both client & server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 🚀 Setup and Installation
+Follow these steps to get the project running locally on your machine.
 
-### Code Splitting
+1. Clone the Repository
+git clone https://github.com/your-username/connectsphere-fullstack.git
+cd connectsphere-fullstack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Set Up Environment Variables
+You will need to create two .env files—one for the server and one for the client.
 
-### Analyzing the Bundle Size
+A. Server Environment Variables:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Create a file named .env inside the /server directory.
 
-### Making a Progressive Web App
+Add your Google Gemini API key to this file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+server/.env:
 
-### Advanced Configuration
+GEMINI_API_KEY=your_gemini_api_key_here
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+B. Client Environment Variables:
 
-### Deployment
+Create a file named .env inside the /client directory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Add your Firebase project configuration keys here. All keys must start with REACT_APP_.
 
-### `npm run build` fails to minify
+client/.env:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_firebase_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+REACT_APP_FIREBASE_APP_ID=your_firebase_app_id
+REACT_APP_FIREBASE_MEASUREMENT_ID=your_firebase_measurement_id
+
+3. Install Dependencies
+From the root (/connectsphere-fullstack) directory, run the install-all script. This will install all necessary packages for the root, client, and server.
+
+npm run install-all
+
+4. Run the Application
+From the root directory, run the dev script. This will start both the backend server and the frontend React app concurrently.
+
+npm run dev
+
+The React app will be available at http://localhost:3000.
+
+The Node.js server will be running on http://localhost:3001.
+
+# ☁️ Deployment
+This application is designed to be easily deployed to services like Render.
+
+Deploy the Server: Deploy the /server directory as a Web Service. Remember to add your GEMINI_API_KEY as an environment variable in the Render dashboard.
+
+Deploy the Client: Deploy the /client directory as a Static Site. Add all your REACT_APP_... Firebase keys as environment variables in the Render dashboard.
+
+Set Up Rewrites: In your Static Site settings on Render, add a rewrite rule to direct API traffic from the frontend to the backend.
+
+Source: /api/*
+
+Destination: https://your-backend-service-url.onrender.com/api/*
+
+This setup ensures that your API keys remain secure and are not exposed in the frontend code.
