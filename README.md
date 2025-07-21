@@ -10,6 +10,8 @@ User Authentication: Secure sign-up and login functionality using Firebase Authe
 
 # User Profiles: Users can set their name, age, and a list of personal interests.
 
+<img src = "cs8.png">
+
 # Public Feed: A real-time public feed where any user can post their thoughts and see posts from others.
 <img src = "cs2.png">
 
@@ -17,6 +19,8 @@ User Authentication: Secure sign-up and login functionality using Firebase Authe
 <img src = "cs4.png">
 
 # Real-Time Private Chat: Secure, one-on-one chat functionality between users, built with Firestore.
+
+<img src = "cs9.png">
 
 # 🤖 AI Post Summarizer: Utilizes the Gemini API to provide a quick, one-sentence summary of any post on the feed.
 
