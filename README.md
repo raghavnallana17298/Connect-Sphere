@@ -1,6 +1,8 @@
 # ConnectSphere: An Interest-Based Social Platform
 ConnectSphere is a modern, fullstack social media application designed to connect users based on their shared interests. It features a real-time feed, user discovery, private chat, and is enhanced with AI-powered features using the Google Gemini API to make interactions more engaging.
 
+<img src = "cs1.png">
+
 <!-- It's recommended to add a screenshot or logo here -->
 
 # ✨ Features
@@ -9,14 +11,20 @@ User Authentication: Secure sign-up and login functionality using Firebase Authe
 # User Profiles: Users can set their name, age, and a list of personal interests.
 
 # Public Feed: A real-time public feed where any user can post their thoughts and see posts from others.
+<img src = "cs2.png">
 
 # Interest-Based Discovery: A "Discover" page that intelligently suggests other users with at least one shared interest.
+<img src = "cs4.png">
 
 # Real-Time Private Chat: Secure, one-on-one chat functionality between users, built with Firestore.
 
 # 🤖 AI Post Summarizer: Utilizes the Gemini API to provide a quick, one-sentence summary of any post on the feed.
 
+<img src = "cs3.png">
+
 # 🤖 AI Icebreakers: Generates three unique and relevant conversation starters in the chat window based on the shared interests of the two users.
+
+<img src = "cs6.png">
 
 Responsive Design: A clean, modern, and fully responsive UI built with Tailwind CSS.
 
